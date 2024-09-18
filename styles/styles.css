@@ -1,53 +1,71 @@
 body {
-    display: block;
     margin: 8px;
     background-color: rgb(245, 202, 186);
     scroll-behavior: smooth;
 }
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
     text-align: center;
 }
 
-.section {
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+}
+
+.section-sobreMi, 
+.section-actividad,
+.section-tecnologias {
     background-color: rgb(245, 189, 168);
-    display: block;
-    unicode-bidi: isolate;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
 }
 
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-    text-align: center;
+.art-SM {
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    text-align: justify;
 }
 
-.logo-html {
-    display: inline-flex;
-    width: 250px;
-    height: 250px;
-    align-content: center;
+.art-logotec {
+    display: flex;
+    justify-content: space-around;
 }
-.logo { 
-    display: inline-flex;
-    width: 400px;
-    height: 250px;
-    align-content: center;
+
+.div-logo { 
+    padding: 1em;
+    display: flex;
+    margin: 15px 10px;
+    width: 250px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border-width: 1px;
+    border-radius: 35px;
+    border:  1px solid rgb(107, 45, 38);
+}
+
+.div-logo:hover {
+    box-shadow: 2px 4px 10px 4px rgb(226, 155, 155);
+    color: rgb(66, 172, 80);
+    background-color: whitesmoke;
+    transform: scale(1.05);
+    transition: 0.5s;
+    font-size: large;
+}
+
+.form-pseudoclases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 .form-pseudoclases input[type="text"],
@@ -59,5 +77,19 @@ h2 {
     border-width: 1px;
     border-radius: 5px;
     font-size: 20px;
-    width: 700px;
-}
+    width: 80%;
+    height: 80%;
+   }
+
+   .button-submit {
+    background-color: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 50px;
+    width: 160px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+    justify-content: center;
+   }
+   

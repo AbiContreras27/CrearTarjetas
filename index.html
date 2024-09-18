@@ -3,34 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="./styles/reset.css"> --> 
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="icon" type="image/jpg" href="./img/favicon-16x16.png"/>
     <title>Presentación Personal</title>
 </head>
 <body>
-    <h1>Wilkins Contreras</h1>
-    <h2>Mi Página Web</h2>
-    <section class="section">
-        <h2>Sobre Mi</h2>
-        <p>
-            Soy principiante en el desarrollo de software, soy ingeniero de sistemas, sin embargo, me habia inclinado en la infraestructura, administración de servidores, entre otros. Quisiera retomar la programación ya que es un objetivo pendiente desde que estudie hace 10 años este tema, sin embargo eran tecnologia distintas a la actualidad, debido a esto es un reto para mi este proceso que me voy a enfrentar.
-        </p>
-    </section> <br>
-    <section class="section">
-        <h2> Mis Tecnologías Favoritas </h2>
-        <img class="logo-html" src="./img/logo-html.png" alt="Logo de HTML5">
-        <img class="logo" src="./img/logo-css.png" alt="Logo de CSS">
-        <img class="logo" src="./img/logo-js.png" alt="Logo de js">
-    </section> <br>
-    <section class="section">
-        <h2> Mis Actividades Favoritas </h2>
-        <form class="form-pseudoclases">
-            <input type="text"name="titulo" placeholder="Nombre de la Actividad" required> <br>
-            <textarea name="descripcion" cols="30" rows="10" placeholder="Descripción de la Actividad" required ></textarea> <br>
-            <input type="text"name="link-img" placeholder="Link de la imagen" required> <br>
-            <input type="submit" placeholder="Agregar Actividad">
-        </form>
-    </section>
+    <header>
+        <h1>Wilkins Contreras</h1>
+     </header>
+        <h2>Mi Página Web</h2>
+        <section class="section-sobreMi">
+            <article class="art-SM">
+                <h2>Sobre Mi</h2>
+                <p>
+                    Soy principiante en el desarrollo de software, ingeniero de sistemas, donde mi profesión se ha inclinado más hacia la infraestructura, administración de servidores, redes, entre otros. Quisiera retomar la programación, ya que es un objetivo pendiente desde que estudié hace 10 años este tema. Sin embargo, eran tecnologías distintas a la actualidad, debido a esto es un reto para mí este proceso que me voy a enfrentar.
+                </p>
+            </article>
+        </section> <br>
+        <section class="section-tecnologias">
+             <h2> Mis Tecnologías Favoritas </h2>
+             <article class="art-logotec">
+                <div class="div-logo">
+                    <h3>HTML</h3>
+                    <img src="./img/logo-html.png" alt="Logo de HTML5">
+                </div>
+                <div class="div-logo">
+                    <h3>CSS</h3>
+                  <img src="./img/logo-css.png" alt="Logo de CSS">  
+                </div>
+                <div class="div-logo">
+                    <h3>JavaScript</h3>
+                  <img src="./img/logo-js.png" alt="Logo de js">  
+                </div>
+             </article>   
+        </section>
+        <section class="section-actividad">
+            <h2> Mis Actividades Favoritas </h2>
+            <form class="form-pseudoclases">
+                <input type="text"name="titulo" placeholder="Nombre de la Actividad" required>
+                <textarea name="descripcion" cols="30" rows="10" placeholder="Descripción de la Actividad" required ></textarea>
+                <input type="text"name="link-img" placeholder="Link de la imagen" required>
+                <button class="button-submit" type="submit">Agregar Actividad</button>
+            </form>
+        </section>
 </body>
 </html>

@@ -40,6 +40,7 @@ class Repository {
         titleElement.innerHTML = title;
         descriptionElement.innerHTML = description;
         imgElement.src = imgUrl;
+        imgElement.alt = title;
 
     //* Agregando clases CSS a los elementos y crear el div
         titleElement.classList.add('activity-title');
@@ -59,18 +60,22 @@ class Repository {
         return cardElement;
     }
 
-    renderizarAllActivity() {
+    buildCards() {
         const activityContainer = document.getElementById('activityContainer');
         activityContainer.innerHTML = " ";
+        document.getElementById('titleInput').value = '';
+        document.getElementById('imgUrl').value = '';
+        document.getElementById('description').value = '';
+
         const actividies = this.getAllActivities();
-        const cardActivities = actividies.map(activity => this.createCard(activity));   
+        const cardActivities = actividies.map(activity => this.createCard(activity));  
 
         //* Appendear todos los elementos HTML al contenedor
         cardActivities.forEach(card => {
             activityContainer.appendChild(card);
             const setNameHandler = () => {
                 this.deleteActivity(card.dataset.activityId);
-                this.renderizarAllActivity();
+                this.buildCards();
             };
       
             //* método para eliminar la tarjeta
@@ -95,18 +100,18 @@ class Repository {
       
         //* Añadimos una nueva actividad y refrescamos el contenedor de actividades
         this.createActivity(title, description, imgUrl);
-        this.renderizarAllActivity();
+        this.buildCards();
     }
 
     deleteActivity(id) {
-        //* Filtramos la lista de actividades y eliminamos de acuerdo al ID
+        //* Filtramos la lista de actividades y eliminamos de acuerdo al ID, EXTRA CREDIT.
         this.activities = this.activities.filter(activity => activity.id !== parseInt(id));
     }
 }
 
 const repository = new Repository();
 
-//* EventListener para el botón de agregar actividad
+//* Para no recargar la pagina en el evento click del boton
 document.getElementById('setButton').addEventListener('click', function(event) {
     // Prevenir la recarga de la página
     event.preventDefault();

@@ -42,13 +42,14 @@
         <section class="section-actividad">
             <h2> Mis Actividades Favoritas </h2>
             <form class="form-pseudoclases">
-                <input type="text"name="titulo" placeholder="Escribe el nombre de tu Actividad Favorita" required>
-                <textarea name="descripcion" cols="30" rows="10" placeholder="Descripción de la Actividad" required ></textarea>
-                <input type="text"name="link-img" placeholder="Inserta URL de Imagen de la Imagen" required>
-                <button class="button-submit" type="submit">Agregar Actividad</button>
+                <input id="titleInput" type="text"name="titulo" placeholder="Escribe el nombre de tu Actividad Favorita">
+                <textarea id="description" name="descripcion" cols="30" rows="10" placeholder="Descripción de la Actividad"></textarea>
+                <input id="imgUrl" type="text"name="link-img" placeholder="Inserta URL de Imagen de la Imagen">
+                <button id="setButton" type="button">Agregar Actividad</button>
             </form>
-        </section>
-        <a href="index.html#inicio">👆🏾</a>
-        <script src="./scripts/index.js"></script>
+        </section> <br>
+        <div id="activityContainer"></div>
+        <a href="index.html#inicio">👆🏾</a> 
+       <script src="./scripts/index.js"></script> 
 </body>
 </html>
